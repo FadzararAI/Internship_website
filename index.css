@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+
+  --var-primary: #ff5f00;
+  --var-secondary: #b2a8a8;
+  
+  --var--primary-footer: #55433b;
+  --var--secondary-footer: #271811;
+}
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+/* navbar start */
+.nav {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 95, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 20px;
+  padding-bottom: 10px;
+  position: absolute;
+  transition: all .3s;
+}
+.nav:hover{
+  background-color: rgba(255, 95, 0, 0.7);
+}
+.nav .navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.nav .logo {
+  margin-top: 10px;
+  height: 80px;
+}
+
+.nav .links {
+  display: flex;
+  align-items: end;
+  margin-left: auto;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+
+.nav a:hover {
+  transform: scale(1.1);
+}
+
+.nav .profile {
+  padding-bottom: 10px;
+}
+
+/* navbar end */
+
+/* hero section start*/
+.upper{
+  display: flex;
+  flex-direction: column;
+}
+.hero{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/modal_bg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Searches start */
+h1{
+  font-size: 32px;
+  color: white;
+}
+.search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+.searches{
+  padding-top: 10px;
+  display: flex;
+}
+#jobsearch, #locsearch{
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-repeat: no-repeat;
+  background-position: 10px 18px;
+  font-size: 16px;
+  border: 1px solid #FF5F00;
+  padding: 12px 20px 12px 40px;
+  border-right: none;
+}
+button[type=submit]{
+  border: 1px solid #FF5F00;
+  color: white;
+  background-color: #FF5F00;
+  padding: 20px 10px;
+  border-left: none;
+  cursor: pointer;
+}
+button[type=submit]:hover{
+  background-color: #D73C00;
+  border-color: #D73C00;
+}
+/* Searches end */
+/* hero section end */
+
+/* categories start */
+.categories{
+  height: 500px;
+}
+.categories h1{
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 3em;
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFCA74;
+}
+.circle img {
+  align-items: center;
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+}
+.circle-container font{
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+.joblists > .circle-container{
+  text-align: center;
+  margin: auto;
+}
+.joblists {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 100px);
+  grid-template-areas: 
+    "box1 box1 box2 box2 box3 box3"
+    "emp3 box4 box4 box5 box5 emp6";
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.joblists .circle-container:nth-child(1){
+  grid-area: box1;
+}
+.joblists .circle-container:nth-child(2){
+  grid-area: box2;
+}
+.joblists .circle-container:nth-child(3){
+  grid-area: box3;
+}
+.joblists .circle-container:nth-child(4){
+  grid-area: box4;
+}
+.joblists .circle-container:nth-child(5){
+  grid-area: box5;
+}
+/* categories end */
+
+/* footer start */
+footer {
+  width: 100%;
+  min-height: 266px;
+  background-color: var(--var--primary-footer);
+}
+
+footer .top-container {
+  width: 100%;
+  height: 212px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+}
+
+footer .top-container .box-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+footer .top-container .box-navigation .navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #d4d4d4;
+}
+
+footer .top-container .box-navigation .navigation p:nth-child(1) {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+footer .top-container .titles {
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}
+
+footer .bottom-container {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  background-color: var(--var--secondary-footer);
+}
+
+.bottom-container .social-media-icons {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+
+/* footer end */
